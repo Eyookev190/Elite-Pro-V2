@@ -7,7 +7,7 @@ const readline = require("readline")
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const { Low, JSONFile } = require('./lib/lowdb')
-const yargs = require('yargs/yargs')
+3const yargs = require('yargs/yargs')
 const fs = require('fs')
 const chalk = require('chalk')
 const FileType = require('file-type')
@@ -101,7 +101,7 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
 
       let phoneNumber
       if (!!phoneNumber) {
-         phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
+         phoneNumber = phoneNumber.replace(/[^0-9]/g, 255686064455')
 
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
             console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +234810926339")))
@@ -109,21 +109,21 @@ const {  state, saveCreds } =await useMultiFileAuthState(`./session`)
          }
       } else {
          phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 😍\nFor example: +234810926339 : `)))
-         phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
+         phoneNumber = phoneNumber.replace(/[^0-9]/g, 255686064455')
 
          // Ask again when entering the wrong number
          if (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
             console.log(chalk.bgBlack(chalk.redBright("Start with country code of your WhatsApp Number, Example : +234810926339")))
 
             phoneNumber = await question(chalk.bgBlack(chalk.greenBright(`Please type your WhatsApp number 🌟\nFor example: +234810926339 : `)))
-            phoneNumber = phoneNumber.replace(/[^0-9]/g, '')
+            phoneNumber = phoneNumber.replace(/[^0-9]/g, 255686064455')
             rl.close()
          }
       }
 
       setTimeout(async () => {
-         let code = await EliteProEmpire.requestPairingCode(phoneNumber)
-         code = code?.match(/.{1,4}/g)?.join("-") || code
+         let code = await EliteProEmpire.requestPairingCode(phoneNumber)255686064455
+         code = code?.match(/.{1,4}/g)?.join("255686064455") || code
          console.log(chalk.black(chalk.bgGreen(`Your Pairing Code : `)), chalk.black(chalk.white(code)))
       }, 3000)
    }
